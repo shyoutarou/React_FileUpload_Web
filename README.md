@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# React File Uploader - Server
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- <p align="center">
+  <img src="https://raw.githubusercontent.com/shyoutarou/NLW-Next-Level-Week-3/master/.github/demo.gif" alt="NLW Intro" width="650px" />
+</p>
 
-## Available Scripts
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyoutarou/NLW-Next-Level-Week-3/master/.github/HappyLogo.png" alt="Happy Logo" width="80%" />
+</p> -->
 
-In the project directory, you can run:
+## 📌 Index
 
-### `npm start`
+- [React File Uploader - Server](#react-file-uploader---server)
+  - [📌 Index](#-index)
+  - [❔ Sobre o projeto](#-sobre-o-projeto)
+  - [⚙ Instalação e Start](#-instalação-e-start)
+    - [Clonagem](#clonagem)
+    - [📦 Executar Server API REST](#-executar-server-api-rest)
+  - [🐛 Issues](#-issues)
+  - [🤝 Contribuições](#-contribuições)
+  - [📜 License](#-license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ❔ Sobre o projeto
 
-### `npm test`
+Projeto realizado seguindo os vídeos tutoriais desenvolvido pela [Rocketseat](https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg) como complemento as semanas NLW#2 e NLW#3 em que foram desenvolvidas soluções que requerem o upload de arquivos hospedados local e remotamente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Upload de arquivos: front-end com ReactJS](https://www.youtube.com/watch?v=G5UZmvkLWSQ)
+[Upload de arquivos: back-end com NodeJS](https://www.youtube.com/watch?v=MkkbUfcZUZM)
+[Deploy de aplicação NodeJS e ReactJS no Heroku](https://www.youtube.com/watch?v=-j7vLmBMsEU)
 
-### `npm run build`
+<!-- ## 📸 Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Web Interface com ReactJS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shyoutarou/NLW-Next-Level-Week-3/master/.github/demo_web.gif" alt="Happy Web" width="100%" />
+</p> -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙ Instalação e Start
 
-### `npm run eject`
+Certifique-se de que tenha o `Node.js` e um gerenciador de dependências em seu ambiente antes de seguir os passos abaixo.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para instalar e startar a plataforma Happy, use `npm` ou `yarn`:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Clonagem
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Primeiro, clone o repositório para seu ambiente:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+> git clone https://github.com/shyoutarou/React_FileUplod_Server.git 
+```
 
-## Learn More
+Depois, entre no repositório clonado e no diretório correspondente ao que quer testar (web, server).
+Logo após, insira os seguintes comandos no seu terminal para cada diretório respectivamente:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 📦 Executar Server API REST
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# Entra no diretório "server"
+> cd ./server
 
-### Code Splitting
+# Instala todas as dependências
+> yarn install or npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Execute migrations
+> yarn npm run typeorm migration:run
 
-### Analyzing the Bundle Size
+# Start o servidor web para a plataforma Happy
+> yarn start  or npm run start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Será startado em `http://localhost:3000`
+```
 
-### Making a Progressive Web App
+## 🐛 Issues
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Sinta-se à vontade para registrar um novo problema com o respectivo título e descrição no repositório Happy. Se você já encontrou uma solução para seu problema, adoraria revisar sua solicitação de pull!
 
-### Advanced Configuration
+## 🤝 Contribuições
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Siga os passos abaixo para contribuir:
 
-### Deployment
+1. Faça o *fork* do projeto (<https://github.com/shyoutarou/React_FileUplod_Server.git>)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Clone o seu *fork* para sua maquína (`git clone https://github.com/user_name/React_FileUplod_Server.git`)
 
-### `npm run build` fails to minify
+3. Crie uma *branch* para realizar sua modificação (`git checkout -b feature/name_new_feature`)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Adicione suas modificações e faça o *commit* (`git commit -m "Descreva sua modificação"`)
+
+5. *Push* (`git push origin feature/name_new_feature`)
+
+6. Crie um novo *Pull Request*
+
+7. Pronto, agora só aguardar a análise 🚀 
+
+
+## 📜 License
+
+O projeto lançado em 2020 sobre a licença [MIT](./LICENSE) ❤️ 
+
+Made with ♥ by Shyoutarou
+
+Gostou? Deixe uma estrelinha para ajudar o projeto ⭐
+
+ 
+
+
