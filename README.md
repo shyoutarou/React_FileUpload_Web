@@ -1,4 +1,4 @@
-# React File Uploader - Server
+# React File Uploader - Web
 
 <!-- <p align="center">
   <img src="https://raw.githubusercontent.com/shyoutarou/NLW-Next-Level-Week-3/master/.github/demo.gif" alt="NLW Intro" width="650px" />
@@ -10,12 +10,13 @@
 
 ## 📌 Index
 
-- [React File Uploader - Server](#react-file-uploader---server)
+- [React File Uploader - Web](#react-file-uploader---web)
   - [📌 Index](#-index)
   - [❔ Sobre o projeto](#-sobre-o-projeto)
   - [⚙ Instalação e Start](#-instalação-e-start)
     - [Clonagem](#clonagem)
-    - [📦 Executar Server API REST](#-executar-server-api-rest)
+    - [Como executar o projeto](#como-executar-o-projeto)
+    - [💻 Executar Projeto Web](#-executar-projeto-web)
   - [🐛 Issues](#-issues)
   - [🤝 Contribuições](#-contribuições)
   - [📜 License](#-license)
@@ -48,11 +49,33 @@ Para instalar e startar a plataforma Happy, use `npm` ou `yarn`:
 Primeiro, clone o repositório para seu ambiente:
 
 ```bash
-> git clone https://github.com/shyoutarou/React_FileUplod_Server.git 
+> git clone https://github.com/shyoutarou/React_FileUplod_Web.git 
 ```
 
 Depois, entre no repositório clonado e no diretório correspondente ao que quer testar (web, server).
 Logo após, insira os seguintes comandos no seu terminal para cada diretório respectivamente:
+
+### Como executar o projeto
+
+Podemos considerar este projeto como sendo divido em três partes:
+
+Back End (pasta server) Front End (pasta web) Mobile (pasta mobile)
+
+💡 Tanto o Front End quanto o Mobile precisam que o Back End esteja sendo executado para funcionar.
+
+### 💻 Executar Projeto Web
+
+```bash
+# Entra no diretório "server"
+> cd ./frontend
+
+# Instala todas as dependências
+> yarn install or npm install
+
+# Starta o servidor web para a plataforma Happy
+> yarn start  or npm run start
+
+# Será startado em `http://localhost:3000`
 
 ### 📦 Executar Server API REST
 
@@ -80,9 +103,9 @@ Sinta-se à vontade para registrar um novo problema com o respectivo título e d
 
 Siga os passos abaixo para contribuir:
 
-1. Faça o *fork* do projeto (<https://github.com/shyoutarou/React_FileUplod_Server.git>)
+1. Faça o *fork* do projeto (<https://github.com/shyoutarou/React_FileUplod_Web.git>)
 
-2. Clone o seu *fork* para sua maquína (`git clone https://github.com/user_name/React_FileUplod_Server.git`)
+2. Clone o seu *fork* para sua maquína (`git clone https://github.com/user_name/React_FileUplod_Web.git`)
 
 3. Crie uma *branch* para realizar sua modificação (`git checkout -b feature/name_new_feature`)
 
