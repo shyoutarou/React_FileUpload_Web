@@ -102,12 +102,18 @@ class App extends Component {
             url: response.data.url
           });
         })
-        .catch(() => {
+        .catch((err) => {
+
+          toast.error(err.response.data.message);
+          console.log(err.response.data.message)
           this.updateFile(uploadedFile.id, {
             error: true
           });
         });
       } catch(e) {
+
+        console.log(e.message)
+        console.log(e.response.data.message)
         toast.error('Ocorreu um erro ao gravar os arquivos');
       }
   };
