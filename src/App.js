@@ -84,7 +84,7 @@ class App extends Component {
 
     console.log("api.post OUT")
 
-    api.post("posts", data, {
+    api.post("https://uploader-files-mongodb.herokuapp.com/posts", data, {
           onUploadProgress: e => {
             const progress = parseInt(Math.round((e.loaded * 100) / e.total));
             this.updateFile(uploadedFile.id, {
@@ -105,6 +105,7 @@ class App extends Component {
         .catch((err) => {
 
           toast.error(err.response.data.message);
+          console.log(err.message)
           console.log(err.response.data.message)
           this.updateFile(uploadedFile.id, {
             error: true
