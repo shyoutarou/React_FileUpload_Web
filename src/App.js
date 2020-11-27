@@ -9,6 +9,7 @@ import { Container, Content } from "./styles";
 
 import Upload from "./components/Upload";
 import FileList from "./components/FileList";
+import { toast } from "react-toastify"
 
 class App extends Component {
   state = {
