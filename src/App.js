@@ -18,8 +18,11 @@ class App extends Component {
 
   async componentDidMount() {
     try {
+
+         console.log("api.get OUT")
          await api.get("posts").then(res => {
 
+          console.log("api.get IN")
           this.setState({
             uploadedFiles: res.data.map(file => ({
               id: file._id,
@@ -77,26 +80,36 @@ class App extends Component {
     const data = new FormData();
     data.append("file", uploadedFile.file, uploadedFile.name);
 
+    try {
+
+    console.log("api.post OUT")
+
     api.post("posts", data, {
-        onUploadProgress: e => {
-          const progress = parseInt(Math.round((e.loaded * 100) / e.total));
+          onUploadProgress: e => {
+            const progress = parseInt(Math.round((e.loaded * 100) / e.total));
+            this.updateFile(uploadedFile.id, {
+              progress
+            });
+          }
+        })
+        .then(response => {
+
+          console.log("api.post IN")
+
           this.updateFile(uploadedFile.id, {
-            progress
+            uploaded: true,
+            id: response.data._id,
+            url: response.data.url
           });
-        }
-      })
-      .then(response => {
-        this.updateFile(uploadedFile.id, {
-          uploaded: true,
-          id: response.data._id,
-          url: response.data.url
+        })
+        .catch(() => {
+          this.updateFile(uploadedFile.id, {
+            error: true
+          });
         });
-      })
-      .catch(() => {
-        this.updateFile(uploadedFile.id, {
-          error: true
-        });
-      });
+      } catch(e) {
+        toast.error('Ocorreu um erro ao gravar os arquivos');
+      }
   };
 
   
