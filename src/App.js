@@ -16,18 +16,26 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    const response = await api.get("posts");
+    try {
+         await api.get("posts").then(res => {
 
-    this.setState({
-      uploadedFiles: response.data.map(file => ({
-        id: file._id,
-        name: file.name,
-        readableSize: filesize(file.size),
-        preview: file.url,
-        uploaded: true,
-        url: file.url
-      }))
-    });
+          this.setState({
+            uploadedFiles: res.data.map(file => ({
+              id: file._id,
+              name: file.name,
+              readableSize: filesize(file.size),
+              preview: file.url,
+              uploaded: true,
+              url: file.url
+            }))
+          });
+
+      }).catch((err) => {
+          toast.error(err.response.data.message)
+      });        
+    } catch(e) {
+      toast.error('Ocorreu um erro ao recuperar os posts');
+    }
   }
 
   handleUpload = files => {
